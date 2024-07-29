@@ -35,11 +35,10 @@ function SetPomodoro () {
             default:
                 break;
         }
-        console.log(newTimer);
     }
 
-    const handleSubmit = () => {
-        
+    const handleSubmit = e => {
+        e.preventDefault()
     }
 
     return (
