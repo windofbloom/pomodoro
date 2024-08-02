@@ -1,0 +1,23 @@
+.SetPomodoro_container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-container {
+    text-align: center;
+  }
+
+  .input {
+    height: 60px;
+    width: 60px;
+    padding: 2rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14pt;
+    margin: 20px;
+    padding: 1px;
+  }

@@ -2,11 +2,13 @@ import './Button.css'
 
 function Button ({title, activeClass, _callback}) {
     return (
-        <button 
-            className={activeClass}
-            onClick={_callback}>
-            {title}
-        </button>
+        <div className='button_container'>
+            <button 
+                className={activeClass}
+                onClick={_callback}>
+                {title}
+            </button>
+        </div>
     )
 }
 
