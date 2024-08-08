@@ -1,36 +1,45 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { SettingContext } from '../../context/SettingsContext'
 
 import { Button } from '../Button/Button'
+import './TimerButtons.css'
 
 
 function TimerButtons () {
-    const {executing, setCurrentTimer} = useContext(SettingContext)
+    const {
+      executing, 
+      setCurrentTimer, 
+      startAnimate, 
+      updateExecute} = useContext(SettingContext)
+      
+    useEffect(() => {updateExecute(executing)}, [executing, startAnimate])
 
     return(
-        <ul className='labels'>
+        <div className='TimerButtons_container'>
+            <ul className="labels">
           <li>
             <Button 
-              title="Work"
-              activeClass={executing.active === 'work' && 'active-label'}
-              _callback={() => setCurrentTimer('work')}
+              title="Work" 
+              activeClass={executing.active === 'work' ? 'active-label' : undefined} 
+              _callback={() => setCurrentTimer('work')} 
             />
           </li>
           <li>
             <Button 
-              title="Short Break"
-              activeClass={executing.active === 'short' && 'active-label'}
-              _callback={() => setCurrentTimer('short')}
+              title="Short Break" 
+              activeClass={executing.active === 'short' ? 'active-label' : undefined} 
+              _callback={() => setCurrentTimer('short')} 
             />
           </li>
           <li>
             <Button 
-              title="Long Break"
-              activeClass={executing.active === 'long' && 'active-label'}
-              _callback={() => setCurrentTimer('long')}
+              title="Long Break" 
+              activeClass={executing.active === 'long' ? 'active-label' : undefined} 
+              _callback={() => setCurrentTimer('long')} 
             />
           </li>
         </ul>
+        </div>
     )
 }
 

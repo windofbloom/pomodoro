@@ -62,9 +62,9 @@ function SettingContextProvider (props) {
         }
     }
 
-    const children = ({ remaindingTimer }) => {
-        const minutes = Math.floor(remaindingTimer / 60)
-        const seconds = remaindingTimer % 60
+    const children = ({ remainingTime }) => {
+        const minutes = Math.floor(remainingTime / 60)
+        const seconds = remainingTime % 60
 
         return `${minutes}:${seconds}`
     }

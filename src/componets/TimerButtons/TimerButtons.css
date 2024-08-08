@@ -1,0 +1,14 @@
+.TimerButtons_container .labels {
+    list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  font-size: .8rem;
+  padding:.3rem .3rem;
+  background-color: var(--contrast-color);
+  border-radius: 1.5rem;
+}
+
+.active-label {
+    color: var(--light-color);
+    background-color: var(--secondary-color);
+}
