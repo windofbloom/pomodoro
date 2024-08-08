@@ -27,6 +27,7 @@ function App() {
       ) : (
         <>
           <TimerButtons />
+          
           <Button title="Settings" _callback={SettingBtn} />
           
           <div className='time-container'>
